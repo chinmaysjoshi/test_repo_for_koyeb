@@ -27,9 +27,9 @@ RUN curl -O https://downloads.rclone.org/rclone-current-linux-amd64.deb && \
     rm rclone-current-linux-amd64.deb
 
 # Install mega cmd
-RUN wget https://mega.nz/linux/repo/Ubuntu_20.04/amd64/megacmd-xUbuntu_20.04_amd64.deb && \
-    apt-get install -y ./megacmd-xUbuntu_20.04_amd64.deb && \
-    rm -f megacmd-xUbuntu_20.04_amd64.deb
+RUN wget https://mega.nz/linux/repo/xUbuntu_24.04/amd64/megacmd-xUbuntu_24.04_amd64.deb && \
+    dpkg -i megacmd-xUbuntu_24.04_amd64.deb && \
+    rm -f megacmd-xUbuntu_24.04_amd64.deb
     
 # Verify rclone installation (optional)
 RUN rclone version
